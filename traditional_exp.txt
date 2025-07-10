@@ -1,0 +1,66 @@
+traditional_export
+
+SQL> CREATE TABLE ORACLE_DATA (NO number,PERSON_ID VARCHAR2(50),FIRST_NAME VARCHAR2(50),LAST_NAME VARCHAR2(50),IDENTITY VARCHAR2(50),PERSON_NAME VARCHAR2(50),PERSON_VILLAGE VARCHAR2(50),PERSON_CITY VARCHAR2(50));
+
+Table created.
+
+SQL>
+SQL>
+SQL> desc ORACLE_DATA;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NO                                                 NUMBER
+ PERSON_ID                                          VARCHAR2(50)
+ FIRST_NAME                                         VARCHAR2(50)
+ LAST_NAME                                          VARCHAR2(50)
+ IDENTITY                                           VARCHAR2(50)
+ PERSON_NAME                                        VARCHAR2(50)
+ PERSON_VILLAGE                                     VARCHAR2(50)
+ PERSON_CITY                                        VARCHAR2(50)
+
+
+schema_level
+
+exp file=schema_ORACLE_USER.dmp log=schema_ORACLE_USER.log owner=ORACLE_USER 
+
+TABLESPACE_level
+
+exp file=tablespace_ORACLE.dmp log=tablespace_ORACLE.log tablespaces=ORACLE
+
+table_level
+exp file=table_ORACLE_DATA.dmp log=table_ORACLE_DATA.log tables=ORACLE_USER.ORACLE_DATA
+. . exporting table                    ORACLE_DATA        364 rows exported
+
+full_database_bkp
+exp file=table_ORACLE_DATA.dmp log=table_ORACLE_DATA.log full=y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+insert into JADHAV.TABLE02 values(1,'pooja');
+
